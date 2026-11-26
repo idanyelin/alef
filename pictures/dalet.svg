@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="14"/>
+    <feColorMatrix values="0 0 0 0 .45  0 0 0 0 .42  0 0 0 0 .38  0 0 0 .09 0"/>
+  </filter>
+  <filter id="wob1"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="14"/><feDisplacementMap in="SourceGraphic" scale="3.2"/></filter>
+  <filter id="wob2"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="21"/><feDisplacementMap in="SourceGraphic" scale="4.5"/></filter>
+  <filter id="soft"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="2" seed="17"/><feDisplacementMap in="SourceGraphic" scale="6"/></filter>
+  <pattern id="h-blue" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="7" height="7" fill="#aecde8" fill-opacity=".6"/><path d="M0 0 V7 M3.5 0 V7" stroke="#879fb4" stroke-width="1.3" stroke-opacity=".55"/></pattern><pattern id="h-dark" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)"><rect width="7" height="7" fill="#6f6a64" fill-opacity=".6"/><path d="M0 0 V7 M3.5 0 V7" stroke="#56524e" stroke-width="1.3" stroke-opacity=".55"/></pattern><pattern id="h-sky" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(41)"><rect width="7" height="7" fill="#cfe3f1" fill-opacity=".6"/><path d="M0 0 V7 M3.5 0 V7" stroke="#a1b1bb" stroke-width="1.3" stroke-opacity=".55"/></pattern>
+</defs>
+<style>
+  .o1 { fill: none; stroke: #5b5650; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; filter: url(#wob1); }
+  .o2 { fill: none; stroke: #5b5650; stroke-width: 1.2; stroke-opacity: .45; stroke-linecap: round; stroke-linejoin: round; filter: url(#wob2); transform: translate(1.6px, -1.2px); }
+</style>
+<rect width="600" height="450" fill="#fbf7ef"/>
+<g transform="translate(300 225) scale(1.13) translate(-300 -225)">
+<g filter="url(#soft)" transform="translate(2 2)"><path d="M140 230 Q230 120 360 160 Q430 185 450 230 Q430 275 360 300 Q230 340 140 230 Z" fill="#fbf7ef"/></g><g filter="url(#soft)" transform="translate(2 2)"><path d="M140 230 Q230 120 360 160 Q430 185 450 230 Q430 275 360 300 Q230 340 140 230 Z" fill="url(#h-blue)"/></g><g class="o1"><path d="M140 230 Q230 120 360 160 Q430 185 450 230 Q430 275 360 300 Q230 340 140 230 Z"/></g><g class="o2"><path d="M140 230 Q230 120 360 160 Q430 185 450 230 Q430 275 360 300 Q230 340 140 230 Z"/></g>
+<g filter="url(#soft)" transform="translate(2 2)"><polygon points="440,230 520,160 505,230 520,300" fill="#fbf7ef"/></g><g filter="url(#soft)" transform="translate(2 2)"><polygon points="440,230 520,160 505,230 520,300" fill="url(#h-blue)"/></g><g class="o1"><polygon points="440,230 520,160 505,230 520,300"/></g><g class="o2"><polygon points="440,230 520,160 505,230 520,300"/></g>
+<g filter="url(#soft)" transform="translate(2 2)"><path d="M280 160 Q300 110 340 120 Q350 145 345 168" fill="#fbf7ef"/></g><g filter="url(#soft)" transform="translate(2 2)"><path d="M280 160 Q300 110 340 120 Q350 145 345 168" fill="url(#h-sky)"/></g><g class="o1"><path d="M280 160 Q300 110 340 120 Q350 145 345 168"/></g><g class="o2"><path d="M280 160 Q300 110 340 120 Q350 145 345 168"/></g>
+<g filter="url(#soft)" transform="translate(2 2)"><path d="M300 280 Q320 315 345 300" fill="#fbf7ef"/></g><g filter="url(#soft)" transform="translate(2 2)"><path d="M300 280 Q320 315 345 300" fill="url(#h-sky)"/></g><g class="o1"><path d="M300 280 Q320 315 345 300"/></g><g class="o2"><path d="M300 280 Q320 315 345 300"/></g>
+<g filter="url(#soft)" transform="translate(2 2)"><circle cx="205" cy="215" r="13" fill="#fbf7ef"/></g><g filter="url(#soft)" transform="translate(2 2)"><circle cx="205" cy="215" r="13" fill="#fffdf8"/></g><g class="o1"><circle cx="205" cy="215" r="13"/></g><g class="o2"><circle cx="205" cy="215" r="13"/></g>
+<g filter="url(#soft)" transform="translate(2 2)"><circle cx="208" cy="217" r="6" fill="#fbf7ef"/></g><g filter="url(#soft)" transform="translate(2 2)"><circle cx="208" cy="217" r="6" fill="url(#h-dark)"/></g><g class="o1"><circle cx="208" cy="217" r="6"/></g><g class="o2"><circle cx="208" cy="217" r="6"/></g>
+<g class="o1"><path d="M150 245 Q165 255 178 248"/></g><g class="o2"><path d="M150 245 Q165 255 178 248"/></g>
+<g class="o1"><path d="M300 200 Q312 215 300 230 M330 195 Q342 210 330 225 M330 235 Q342 250 330 265 M300 240 Q312 255 300 270 M360 215 Q372 230 360 245"/></g><g class="o2"><path d="M300 200 Q312 215 300 230 M330 195 Q342 210 330 225 M330 235 Q342 250 330 265 M300 240 Q312 255 300 270 M360 215 Q372 230 360 245"/></g>
+<g filter="url(#soft)" transform="translate(2 2)"><circle cx="105" cy="160" r="12" fill="#fbf7ef"/></g><g filter="url(#soft)" transform="translate(2 2)"><circle cx="105" cy="160" r="12" fill="url(#h-sky)"/></g><g class="o1"><circle cx="105" cy="160" r="12"/></g><g class="o2"><circle cx="105" cy="160" r="12"/></g>
+<g filter="url(#soft)" transform="translate(2 2)"><circle cx="85" cy="115" r="8" fill="#fbf7ef"/></g><g filter="url(#soft)" transform="translate(2 2)"><circle cx="85" cy="115" r="8" fill="url(#h-sky)"/></g><g class="o1"><circle cx="85" cy="115" r="8"/></g><g class="o2"><circle cx="85" cy="115" r="8"/></g>
+<g filter="url(#soft)" transform="translate(2 2)"><circle cx="110" cy="78" r="6" fill="#fbf7ef"/></g><g filter="url(#soft)" transform="translate(2 2)"><circle cx="110" cy="78" r="6" fill="url(#h-sky)"/></g><g class="o1"><circle cx="110" cy="78" r="6"/></g><g class="o2"><circle cx="110" cy="78" r="6"/></g>
+</g>
+<rect width="600" height="450" filter="url(#grain)"/>
+</svg>

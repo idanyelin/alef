@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="22"/>
+    <feColorMatrix values="0 0 0 0 .45  0 0 0 0 .42  0 0 0 0 .38  0 0 0 .09 0"/>
+  </filter>
+  <filter id="wob1"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="22"/><feDisplacementMap in="SourceGraphic" scale="3.2"/></filter>
+  <filter id="wob2"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="29"/><feDisplacementMap in="SourceGraphic" scale="4.5"/></filter>
+  <filter id="soft"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="2" seed="25"/><feDisplacementMap in="SourceGraphic" scale="6"/></filter>
+  <pattern id="h-dgreen" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="7" height="7" fill="#93c08e" fill-opacity=".6"/><path d="M0 0 V7 M3.5 0 V7" stroke="#72956e" stroke-width="1.3" stroke-opacity=".55"/></pattern><pattern id="h-yellow" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)"><rect width="7" height="7" fill="#f6dc8c" fill-opacity=".6"/><path d="M0 0 V7 M3.5 0 V7" stroke="#bfab6d" stroke-width="1.3" stroke-opacity=".55"/></pattern>
+</defs>
+<style>
+  .o1 { fill: none; stroke: #5b5650; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; filter: url(#wob1); }
+  .o2 { fill: none; stroke: #5b5650; stroke-width: 1.2; stroke-opacity: .45; stroke-linecap: round; stroke-linejoin: round; filter: url(#wob2); transform: translate(1.6px, -1.2px); }
+</style>
+<rect width="600" height="450" fill="#fbf7ef"/>
+<g transform="translate(300 225) scale(1.13) translate(-300 -225)">
+<g filter="url(#soft)" transform="translate(2 2)"><path d="M130 240 Q140 150 300 140 Q450 140 470 230 L495 240 L470 252 Q450 340 300 340 Q140 335 130 245 L110 240 Z" fill="#fbf7ef"/></g><g filter="url(#soft)" transform="translate(2 2)"><path d="M130 240 Q140 150 300 140 Q450 140 470 230 L495 240 L470 252 Q450 340 300 340 Q140 335 130 245 L110 240 Z" fill="url(#h-yellow)"/></g><g class="o1"><path d="M130 240 Q140 150 300 140 Q450 140 470 230 L495 240 L470 252 Q450 340 300 340 Q140 335 130 245 L110 240 Z"/></g><g class="o2"><path d="M130 240 Q140 150 300 140 Q450 140 470 230 L495 240 L470 252 Q450 340 300 340 Q140 335 130 245 L110 240 Z"/></g>
+<g filter="url(#soft)" transform="translate(2 2)"><path d="M300 140 Q330 90 390 95 Q360 145 300 140 Z" fill="#fbf7ef"/></g><g filter="url(#soft)" transform="translate(2 2)"><path d="M300 140 Q330 90 390 95 Q360 145 300 140 Z" fill="url(#h-dgreen)"/></g><g class="o1"><path d="M300 140 Q330 90 390 95 Q360 145 300 140 Z"/></g><g class="o2"><path d="M300 140 Q330 90 390 95 Q360 145 300 140 Z"/></g>
+<g class="o1"><path d="M305 138 Q340 115 370 106"/></g><g class="o2"><path d="M305 138 Q340 115 370 106"/></g>
+<g class="o1"><path d="M200 190 Q240 165 290 165"/></g><g class="o2"><path d="M200 190 Q240 165 290 165"/></g>
+</g>
+<rect width="600" height="450" filter="url(#grain)"/>
+</svg>
